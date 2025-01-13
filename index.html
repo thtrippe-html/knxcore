@@ -3,47 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoyageVista: Your Gateway to the World</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>VoyageVista</title>
+    <link href="output.css" rel="stylesheet"> <!-- Link to your Tailwind output -->
 </head>
-<body>
-    <header>
-        <h1>Welcome VoyageVista: Travel Booker</h1>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-blue-600 text-white p-4">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold">VoyageVista</div>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:text-blue-300">Flights</a></li>
+                <li><a href="#" class="hover:text-blue-300">Hotels</a></li>
+                <li><a href="#" class="hover:text-blue-300">Cars</a></li>
+                <li><a href="#" class="hover:text-blue-300">Deals</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <main>
-        <section id="search">
-            <h2>Search for a Trip</h2>
-            <form id="search-form">
-                <label for="destination">Destination:</label>
-                <input type="text" id="destination" name="destination" placeholder="Enter a destination">
 
-                <label for="check-in">Check-in Date:</label>
-                <input type="date" id="check-in" name="check-in">
-
-                <label for="check-out">Check-out Date:</label>
-                <input type="date" id="check-out" name="check-out">
-
-                <button type="submit">Search</button>
+    <main class="container mx-auto p-6">
+        <section class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h1 class="text-2xl font-bold mb-4 text-center">Plan Your Next Adventure</h1>
+            <form class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <input type="text" placeholder="Where to?" class="p-2 border border-gray-300 rounded">
+                <input type="date" class="p-2 border border-gray-300 rounded">
+                <input type="date" class="p-2 border border-gray-300 rounded">
+                <button type="submit" class="col-span-1 sm:col-span-3 bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+                    Search
+                </button>
             </form>
         </section>
 
-        <section id="popular-destinations">
-            <h2>Popular Destinations</h2>
-            <ul>
-                <li>Paris, France</li>
-                <li>New York City, USA</li>
-                <li>Tokyo, Japan</li>
-                <li>Dubai, UAE</li>
-                <li>Lucerne, Switzerland</li>
-            </ul>
+        <section>
+            <h2 class="text-xl font-bold mb-4">Top Destinations</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <h3 class="font-bold">Paris, France</h3>
+                    <p>From $499 round trip</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <h3 class="font-bold">Tokyo, Japan</h3>
+                    <p>From $849 round trip</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <h3 class="font-bold">Lucerne, Switzerland</h3>
+                    <p>From $599 round trip</p>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Travel Booking System. All Rights Reserved.</p>
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2025 VoyageVista. All Rights Reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
